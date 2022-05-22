@@ -111,6 +111,7 @@ class _TodoScreenState extends State<TodoScreen> {
                     var _todoService = TodoService();
                     var result = await _todoService.saveTodo(todoObject);
                     debugPrint(result.toString());
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen()));
                   },
                   color: Colors.blue,
                   child: Text(
